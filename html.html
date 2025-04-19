@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imgs/faviconPF.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>Resumos PF</h1></a>
+        <nav>
+            <a href="html.html">HTML</a> |
+            <a href="css.html">CSS</a>
+        </nav>
+    </header>
+    <main>
+        <div class="inicioTopico">
+            <h2>HTML</h2>
+            <p>Resumo feito lendo o site da <a href="https://w3schools.com">w3schools</a>, traduzido para português</p>
+            <nav>
+                <a href="#elementosHtml">Elementos</a> |
+                <a href="#estruturaHtml">Estrutura</a> |
+                <a href="#basicosHtml">Basicos</a> |
+                <a href="#atributosHtml">Atributos</a> |
+                <a href="#formatacaoHtml">Formatação de texto</a> |
+                <a href="#listasHtml">Listas</a> |
+                <a href="#imgHtml">Imagem</a> |
+                <a href="#linksHtml">Links</a> |
+                <a href="#tabelaHtml">Tabela</a> |
+                <a href="#blockInlineHtml">Block e inline</a> |
+                <a href="#classIdHtml">class e id</a> |
+                <a href="#iframeHtml">Iframe</a> |
+                <a href="#semanticaHtml">Semântica</a>
+            </nav>
+        </div>
+
+        <article id="elementosHtml">
+            <h3>Elementos HTML</h3>
+            <div class="codigo">
+                <p>&lt;p&gt;Isto é um parágrafo &lt;/p&gt;</p>
+            </div>
+            
+            <p>Um elemento HTML é marcado por tags, como o &lt;p&gt; acima; Conteúdo do elemento, "Isto é um parágrafo"; e geralmente uma tag de fechamento &lt;/p&gt;</p>
+        </article>
+
+        <article id="estruturaHtml">
+            <h3>estrutura do HTML</h3>
+            <p>As páginas HTML devem possuir uma estrutura base:</p>
+            <div class="img">
+                <img src="imgs/estruturaHTML.png" alt="estruturabase de um código html">
+            </div>
+            <div class="codigo">
+                <span class="comentario"><p>&lt;!-- Comentários no HTML são feitos dessa forma --&gt;</p></span>
+                <p>&lt;!DOCTYPE html&gt;            <span class="comentario">&lt;!-- informa sobre o tipo de html que será utilizado --&gt;</span></p>
+                <p>&lt;html&gt;                     <span class="comentario">&lt;!-- representa a raiz do documento (todo código HTML deve estar entre ela) --&gt;</span></p>
+                <p>&lt;head&gt; &lt;/head&gt;       <span class="comentario">&lt;!-- Indica metadados sobre a página, como título, ícone, etc --&gt;</span></p>
+                <p>&lt;body&gt; &lt;/body&gt;       <span class="comentario">&lt;!-- Parte visual da página, parágrafos, tabelas, imagens --&gt;</span></p>
+                <p>&lt;/html&gt;</p>
+            </div>
+        </article>
+
+        <article id="basicosHtml">
+            <h3>Básicos do HTML</h3>
+            <p>Algumas tags básicas utilizadas no HTML</p>
+            <h4>Título da página</h4>
+            <p>Você pode definir o nome da página dentro da tag &lt;title&gt; que fica dentro da tag &lt;head&gt;</p>
+            <h4>Títulos e subitítulos</h4>
+            <p>Existem tags de &lt;h1&gt; até &lt;h6&gt; e elas são utilizadas para títulos e subtítulos</p>
+            <h4>Parágrafos</h4>
+            <p>A tag &lt;p&gt; indica que o texto faz parte de um parágrafo</p>
+        </article>
+
+        <article id="atributosHtml">
+            <h3>Atributos no HTML</h3>
+            <p>Os elementos HTML podem ter atributos que dão informações adicionais para o elemento. São sempre colocados nas tags de abertura e geralmente são assim: atributo="valor" . O HTML possui dois tipos de atributos:</p>
+            <ol>
+                <li>Globais: É possivel de utliza-los em todos elementos HTML (id e class)</li>
+                <li>Específicos: Só é possivel utiliza-lo de acordo com o elemento usado</li>
+            </ol>
+        </article>
+
+        <article id="formatacaoHtml">
+            <h3>Formatação de texto</h3>
+            <p>É possivel deixar alguns tipos especiais de texto</p>
+
+            <h4>&lt;b&gt; e &lt;strong&gt;</h4>
+            <p>Ambos conseguem deixar o texto em <b>negrito</b>, porém a tag <strong>strong</strong> indica maior importância</p>
+            <h4>&lt;i&gt; e &lt;em&gt;</h4>
+            <p>Ambos deixa o itálico, as diferenças são que a tag i é utilizada para mostrar termos técnicos, pensamentos ou outra linguagem enquanto que a tag em dá uma ênfase na palavra, quando um leitor de tela ler um elemento com a tag em ele será lido com mais ênfase</p>
+            <h4>&lt;mark&gt;</h4>
+            <p>A tag <mark>mark</mark> indica que um texto deve ser marcado ou destacado</p>
+            <h4>&lt;small&gt;</h4>
+            <p>Simplesmente indica um texto com uma <small>fonte menor</small></p>
+            <h4>&lt;del&gt;</h4>
+            <p>Indica que um texto foi <del>adicionado</del> deletado</p>
+            <h4>&lt;sub&gt; e &lt;sup&gt;</h4>
+            <p>Ambas são parecidas, enquanto a sub é um texto colocado na parte <sub>inferior</sub> do texto a sup é colocado na parte <sup>superior</sup></p>
+            <p>Geralmente são utilizadas para escrever fórmulas, como: H<sub>2</sub>O e E=MC<sup>2</sup></p>
+        </article>
+
+        <article id="listasHtml">
+            <h3>Listas em HTML</h3>
+            <p>Há três tipos de listas em HTML, listas ordenadas (&lt;ol&gt;), não ordenadas (&lt;ul&gt;) e listas de descrição, para inserir a lista basta colocar entre as tags do tipo de lista que deseja e colocar a tag &lt;li&gt;(list item) para cada item da lista.</p>
+            <h4>Lista ordenada &lt;ol&gt;:</h4>
+            <ol>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ol>
+            <p>É possivel começar a lista de qualquer número com o atributo start=""</p>
+            <h4>Lista não ordenada &lt;ul&gt;:</h4>
+            <ul>
+                <li>Elemento</li>
+                <li>Elemento</li>
+                <li>Elemento</li>
+            </ul>
+            <p>A propriedade list-style-type no CSS é usada para definir o estilo da marcação de item. possiveis valores:</p>
+                <ul>
+                    <li>disc - Define o marcador como um disco (padrão)</li>
+                    <li>circle - Define o marcador como um círculo</li>
+                    <li>square - Define o marcador como um quadrado</li>
+                    <li>none - Remove o marcador</li>
+                </ul>
+            <h4>Lista descritiva &lt;dl&gt;:</h4>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk (&lt;dt&gt;)</dt>
+                <dd>- white cold drink (&lt;dd&gt;)</dd>
+            </dl>
+        </article>
+
+        <article id="imgHtml">
+            <h3>Inserção de imagem</h3>
+            <p>Para inserir uma imagem em HTML basta abrir a tag &lt;img&gt; e colocar no atributo src="" o diretório onde está localizado a imagem, como feito no print acima.</p>
+            <div class="img">
+                <img src="imgs/insercaoImg.png" alt="Exemplo de inserção de página">
+            </div>
+            <p>O atributo src permite que você coloque imagem na pasta do projeto e em diferentes servidores/sites colocando a url.</p>
+            <p>Também é possivel colocar gifs no atributo src.</p>
+            <h4>Atributos adcionais</h4>
+            <div class="listasAtributos">
+                <ul>
+                    <li>
+                        alt="" - Texto alternativo caso a imagem não seja carregada.
+                    </li>
+                    <li>
+                        style="" - Pode ser usado para definir altura e largura da imagem.
+                        <ul>
+                            <li>width:500px; - Define uma largura de 500 pixels.</li>
+                            <li>height:500px; - Define uma altura de 500 pixels.</li>
+                            <li>width e height tambem podem ser usados como atributos separados.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <h4>&lt;picture&gt;</h4>
+            <p>A tag  picture permite você colocar diferentes imagens para diferentes dispositivos</p>
+            <p>O elemento picture possui um ou mais elementos &lt;source&gt;, cada um direcionando para um imagem através do atributo srcset="". Cada elemento &lt;source&gt; também possui um atributo media que define quando a imagem deve ser inserida.</p>
+            <div class="img">
+                <picture>
+                    <source media="(min-width: 1150px)" srcset="imgs/testePictureWide.png">
+                    <source media="(min-width: 700px)" srcset="imgs/testePictureMed.png">
+                    <img src="imgs/testePictureShort.png">
+                </picture>
+            </div>
+            <p>Sempre use uma &lt;img&gt; no fim da &lt;picture&gt;. Ela será usada caso nenhuma imagem do &lt;source&gt; for suportada.</p>
+            <h4>Favicon</h4>
+            <p>Favicon é a imagem mostrada no topo do navagdor ao lado do título da página. Um favicon pode ser criado em <a href="https://www.favicon.cc/" target="_blank" title="Site para criar favicon">Favicon.cc</a>.</p>
+            <p>Pode ser inserido usando a tag &lt;link&gt; da seguinte maneira:</p>
+            <div class="codigo">
+                &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
+            </div>
+        </article>
+
+        <article id="linksHtml">
+            <h3>Links em HTML</h3>
+            <p>Para inserir links, é necessário utilizar a tag &lt;a&gt; com atributos de href="" apontando para onde deverá ser redirecionado, ex: <a href="https://google.com" target="_blank" title="Google">Site do google</a> (href="https://google.com")</p>
+            <p>É possivel Utilizar como valores no atributo href="":</p>
+            <ul>
+                <li>URL absolutas: aponta para outro site (https://www.w3schools.com)</li>
+                <li>URL relativa: aponta para um site dentro de alguma pasta (pagina2.html)</li>
+                <li>Para um elemento com id específico na própria página (#idElemento)</li>
+                <li>Outros protocolos (https://, ftp://, mailto:, file:, etc..)</li>
+                <li>Um script (href="javascript:alert('Hello');")</li>
+            </ul>
+            <h4>Atributos adcionais</h4>
+            <div class="listasAtributos">
+                <ul>
+                    <li>
+                        target="" - Indica como a página referenciada no link será aberta
+                        <ul>
+                            <li>_blank - Abre a página indicada em nova guia</li>
+                            <li>_self - Abre na mesma página</li>
+                        </ul>
+                    </li>
+                    <li>
+                        title="" - Informação extra ao passar mouse sobre link
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article id="tabelaHtml">
+            <h3>Tabelas</h3>
+            <p>Estrutura de uma tabela básica no HTML:</p>
+            <table>
+                <colgroup>
+                    <col span="2" style="background-color: rgb(115, 62, 113);">
+                </colgroup>
+                <tr>
+                    <th colspan="2">Nome</th>
+                    <th>Idade</th>
+                </tr>
+                <tr>
+                    <td>Joao</td>
+                    <td>Pedro</td>
+                    <td rowspan="2">1.66</td>
+                </tr>
+                <tr>
+                    <td>Heitor</td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="codigo">
+                &lt;table&gt; <br> 
+                    &emsp;&lt;colgroup&gt; <br>
+                        &emsp;&emsp;&lt;col span="2" style="background-color: rgb(115, 62, 113);"&gt; <br>
+                    &emsp;&lt;/colgroup&gt; <br>
+                    &emsp; &lt;tr&gt; <br> 
+                        &emsp; &emsp;&lt;th colspan="2"&gt;Nome&lt;/th&gt; <br> 
+                        &emsp; &emsp;&lt;th&gt;Altura&lt;/th&gt; <br> 
+                    &emsp; &lt;/tr&gt; <br> 
+                    &emsp; &lt;tr&gt; <br> 
+                        &emsp; &emsp; &lt;td&gt;Joao&lt;/td&gt; <br> 
+                        &emsp; &emsp; &lt;td&gt;20&lt;/td&gt; <br> 
+                        &emsp; &emsp; &lt;td rowspan="2"&gt;1.66&lt;/td&gt; <br> 
+                    &emsp; &lt;/tr&gt; <br> 
+                    &emsp; &lt;tr&gt; <br> 
+                        &emsp; &emsp;&lt;td&gt;Heitor&lt;/td&gt; <br> 
+                        &emsp; &emsp;&lt;td&gt;&lt;/td&gt; <br> 
+                    &emsp;&lt;/tr&gt; <br> 
+                &lt;/table&gt;
+            </div>
+            <p>Cada conteúdo da célula da tabela fica entre as tags td (table data)</p>
+            <p>Cada linha da tabela é definida pela tag tr (table row), É possivel ter quantas linhas quiser, porém tomar cuidado para ter mesmo número de células em cada</p>
+            <p>Você pode utilizar th (table header) para células de cabeçalho, que por padrão são centrilizadas e estão em negrito</p>
+            <h4>rowspan e colspan</h4>
+            <p>É possivel ocupar 2 ou mais espaços para linhas e colunas na tabela</p>
+            <p>Com &lt;colspan&gt; você coonsegue definir quantos espaços na mesma linha o atrbito irá ocupar</p>
+            <p>&lt;rowspan&gt; segue a mesma ideia, porem para colunas.</p>
+            <h4>colgroup</h4>
+            <p>É possivel agrupar um conjunto de colunas com a tag &lt;colgroup&gt; e &lt;col&gt; com atributo span indicando quantas colunas serão agrupadas, esses elementos precisam vir antes das tags &lt;th&gt;, &lt;td&gt; e &lt;td&gt;</p>
+            <p>Pórem há prorpriedades limitadas do CSS para se utilizar em um &lt;colgroup&gt;:</p>
+            <ul>
+                <li>width (largura)</li>
+                <li>visibility (visibility)</li>
+                <li>background (imagem e cores de fundo)</li>
+                <li>border (bordas)</li>
+            </ul>
+            <p>Se deseja agrupar colunas separadas basta criar tags col com span vazios entre os grupos</p>
+        </article>
+
+        <article id="blockInlineHtml">
+            <h3>Block e inline</h3>
+            <p>Todo elemento HTML possui um valor display padrão; block e inline são os mais comuns</p>
+            <h4>Block</h4>
+            <p>Elementos block sempre começam em uma nova linha e ocupam a máxima largura que conseguirem por padrão</p>
+            <p>Exemplos de elementos block:</p>
+            <table>
+                <tr>
+                    <td>&lt;adress&gt;</td>
+                    <td>&lt;table&gt;</td>
+                    <td>&lt;footer&gt;</td>
+                    <td>&lt;h1&gt;-&lt;h6&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;section&gt;</td>
+                    <td>&lt;aside&gt;</td>
+                    <td>&lt;video&gt;</td>
+                    <td>&lt;p&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;article&gt;</td>
+                    <td>&lt;main&gt;</td>
+                    <td>&lt;form&gt;</td>
+                    <td>&lt;header&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;li&gt;</td>
+                    <td>&lt;nav&gt;</td>
+                    <td>&lt;div&gt;</td>
+                    <td>&lt;pre&gt;</td>
+                </tr>
+            </table>
+            <h4>Inline</h4>
+            <p>Elementos inline não iniciam uma nova linha e ocupam somente a largura necessária</p>
+            <p>Exemplos de elementos inline:</p>
+            <table>
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>&lt;span&gt;</td>
+                    <td>&lt;strong&gt;</td>
+                    <td>&lt;b&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;sup&gt;</td>
+                    <td>&lt;i&gt;</td>
+                    <td>&lt;img&gt;</td>
+                    <td>&lt;input&gt;</td>
+                </tr>
+            </table>
+            <h4>&lt;div&gt;</h4>
+            <p>Geralmente é um container para outros elementos HTML, não possui atributos além de style, class e id. Pode ser usado como um bloc de conteúdo</p>
+            <p>Se quiser alinhar uma div que não ocupe toda sua largura, basta usar propriedade do CSS margin:auto; - Margin no auto fará com que o elemento possua a maior margin horizontal possivel, consequentemente, centralizando o elemento</p>
+            <h4>&lt;span&gt;</h4>
+            <p>Elemento inline que é usado para marcar um texto ou parte de um conteúdo, também não possui elementos além de style, class e id. Pode ser usado para estilizar partes de um texto</p>
+            <h4>Inline-block</h4>
+            <p>Se voce colocar a propriedade display com valor "inline-block" os elementos div não vao mais quebrar uma linha antes e dpois e será mostrado lado a lado ao inves de verticalmente</p>
+            <h4>flex</h4>
+            <p>display: flex; foi introduzido para facilitar a fazer designs flexíveis responsivos.</p>
+            <p>Para fazer o flex funcionar, rodeie a div por outra div e dê a div pai o display: flex;</p>
+        </article>
+
+        <article id="classIdHtml">
+            <h3>Atributos class e id</h3>
+            <p>São atributos usados para especificar elementos no HTML</p>
+            <h4>Class</h4>
+            <p>Geralmente é usado para um nome de classe no CSS, também pode ser usado no JavaScript para acessar e manipular os elementos.</p>
+            <p>Os elementos podem possuir mais de uma classe, separados por espaço. Diferentes elementos podem compartilhar as mesmas classes</p>
+            <h4>id</h4>
+            <p>É usado para especificar um único elemento HTML. ou seja, deve ser único por elemento.</p>
+        </article>
+
+        <article id="iframeHtml">
+            <h3>Iframe</h3>
+            <p>tag iframe é utilizada para colocar um site dentro de outro site</p>
+            <div class="iframe">
+                <iframe src="css.html" height="300px" width="1400px" title="Teste iframe"></iframe>
+            </div>
+            <div class="codigo">
+                &lt;iframe srv=css.html height="300px" width="1400px"&gt;
+            </div>
+            
+        </article>
+       
+        <article id="headHtml">
+            <h3>Tag head</h3>
+            <p>A tag head contem elementos que não necessariamente vão aparecer na página, possui informações sobre a própria página  (metadados). pode conter as tags &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, and &lt;base&gt;.</p>
+            <h4>title</h4>
+            <p>A tag title define o título do documento, e é obrigatório em um documento HTML. o título:</p>
+            <ul>
+                <li>Define um título para a página</li>
+                <li>Coloca um título para quando página for adcionada aos favoritos</li>
+                <li>Mostra o tpitulo em páginas de pesquisa</li>
+            </ul>
+            <h4>link</h4>
+            <p>A tag link define uma relação entre o documento atual e algum recurso externo</p>
+            <h4>meta</h4>
+            <p>A tag meta é usada para especificar o character set, descrição da página, teclados, autor do documento e configurações de visualização</p>
+            <h4>Configurando viewport</h4>
+            <p>viewport é a área visivel de uma página, que varia de acordo com os dispositivos. Voce deve incluir o seguinte comando em todas suas páginas:</p>
+            <div class="codigo">
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </div>
+            <p>O width=device-width coloca a largura da página para seguir a largura do dispositivo</p>
+            <p>A initial-scale=1.0 define o level de zoom inicial da página quando a página for carregada</p>
+        </article>
+
+        <article>
+            <h3>Layout</h3>
+            <p>Website HTML podem conter contepúdos em varias colunas, como em revistas e jornais</p>
+            <p>Técnicas para criar layouts com várias colunas (cada uma possuindo seus prós e contras)</p>
+            <ul>
+                <li>Frameworks css</li>
+                <li>Propriedade float</li>
+                <li>flexbox</li>
+                <li>grid</li>
+            </ul>
+            <h4>Frameworks</h4>
+            <p>Se quiser criar seus layouts de forma rápida, você pode usar o um framework CSS, como o Bootstrap</p>
+            <h4>float</h4>
+            <p>É comum fazer layouts web utilizando o float. só é necessário entender como as propridades float e clear funcionam.</p>
+            <p>Disvantagens: elementos float estão amarrados com o movimentos do documento, e isso pode afetar a flexiblidade</p>
+            <h4>flexbox</h4>
+            <p>Uso de flexbox garante que elementos se comportem de maneira previsível quando o layout precisar acomodar diferentes tamanhos de tela</p>
+            <h4>grid</h4>
+            <p>O uso do módulo grid oderece um layout em grade, com linhas e colunas, ficando mais fácil para montar páginas web sem usar float</p>
+        </article>
+        
+        <article id="semanticaHtml">
+            <h3>Elementos semântivos</h3>
+            <p>São elementos que possuem um significado, tanto para o navegador tanto para o desenvolvedor, mas não interferem na estrutura do HTML</p>
+            <div class="img">
+                <img src="imgs/semanticaHTML.png" alt="Exemplos de elementos semânticos">
+            </div>
+            <h4>Alguns exemplos:</h4>
+            <ul>
+                <li>&lt;header&gt; - Container para introdução</li>
+                <li>&lt;main&gt; - Indica onde está o principal conteúdo da página</li>
+                <li>&lt;nav&gt; - Define uma navegação entre sites e a página</li>
+                <li>&lt;article&gt; - Conteúdo independente, auto-explicativo</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Formulários</h3>
+            <p>Formulários são usados para coletar inputs do usuário</p>
+            <h4>&lt;form&gt;</h4>
+            A tag form é usado para criar um formulário para receber input do usuário. Pode receber vários tipos de elementos input
+            <h5>&lt;input&gt;</h5>
+        </article>
+    </main>
+</body>
+</html>

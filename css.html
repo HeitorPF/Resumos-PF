@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imgs/faviconPF.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>Resumos PF</h1></a>
+        <nav>
+            <a href="html.html">HTML</a> |
+            <a href="css.html">CSS</a>
+        </nav>
+    </header>
+    <main>
+        <div class="inicioTopico">
+            <h2>CSS</h2>
+            <p>Resumo feito lendo o site da <a href="https://w3schools.com">w3schools</a>, traduzido para português</p>
+            <nav>
+                <a href="#insercaoCss">Inserção do CSS</a> |
+                <a href="#estruturaCss">Estrutura</a> |
+                <a href="#seletoresCss">Seletores</a> |
+                <a href="#coresCss">Cores</a> |
+                <a href="#boxModelCss">Box model</a> 
+            </nav>
+        </div>
+
+        <article id="insercaoCss">
+            <h3>Formas de inserção de CSS</h3>
+            <p>Há 3 forma de inserir o CSS no html:</p>
+            <ul>
+                <li>
+                    CSS externo - É feito através de uma tag &lt;link&gt; dentro da tag &lt;head&gt; no HTML da sequinte forma:
+                    &lt;link rel="stylesheet" href="style.css"&gt; com href apontando para um arquivo .css
+                </li>
+                <li>
+                    CSS interno - É feito pela tag &lt;style&gt; dentro da tag &lt;head&gt;, dentro do prórpio HTML
+                </li>
+                <li>
+                    CSS inline - É utilizado em um único elemento, basta colocar o atributo style="" contendo propriedades do CSS
+                </li>
+            </ul>
+            <p>Se um elemento possuir mais de uma definição CSS, Basta olhar as prioridades para saber qual será aplicada:</p>
+            <ol reversed>
+                <li>Padrão do navegador (Menor prioridade)</li>
+                <li>CSS externo e interno(O último a aparecer será o aplicado)</li>
+                <li>CSS inline (Maior prioridade)</li>
+            </ol>
+        </article>
+
+        <article id="estruturaCss">
+            <h3>Estrutura do CSS</h3>
+            <p>A estrutura do CSS é baseado em um seletor com uma declaração, que contém uma propriedade e um valor, ex:</p>
+            <div class="codigo">
+                <p>
+                    p { <span class="comentario">/*seletor: Para todos elementos p, serão aplicadas font-size de 20px e color red*/</span><br> &emsp;
+                        font-size: 20px; <span class="comentario">/*Cada linha possui a propriedade (font-size) e valor (20px)*/</span> <br> &emsp;
+                        color: red; <span class="comentario">/*propriedade: color -> valor: red*/</span> <br>
+                    }
+                </p>
+            </div>
+        </article>
+
+        <article id="seletoresCss">
+            <h3>Seletores CSS</h3>
+            <p>Seletores define o que você quer mudar de estilo</p>
+            <div>
+                <h4>Seletor universal</h4>
+                <p>para selecionar todos os elementos é ultizado o *, ex:</p>
+                <div class="codigo">
+                    * {color: blue;} <span class="comentario">/*Seleciona todos os elementos e deixa a fonte de cor azul*/</span>
+                </div>
+            </div>
+            <div>
+                <h4>Seletor de elementos</h4>
+                <p>Seleciona através das tags HTML, basta escrever a tag ex:</p>
+                <div class="codigo">
+                    h1 { <span class="comentario">/*Onde houver a tag h1, será aplicado uma cor de fundo preta com fonte branca*/</span> <br> &emsp;
+                        background-color: black; <br> &emsp;
+                        color: white; <br>
+                    }
+                </div>
+            </div>
+
+            <div>
+                <h4>Seletor de classes</h4>
+                <p>Seleciona a classe dos elementos pelo atributo class="", escreva a classe seguido de um ".", ex:</p>
+                <div class="codigo">
+                    .codigo {  <span class="comentario">/*Seleciona todos elementos que possuem a classe codigo e aplica o estilo neles*/</span> <br> &emsp;
+                        background-color: blue; <br> &emsp;
+                        color white; <br>
+                    }
+                </div>
+            </div>
+
+            <div>
+                <h4>Seletor de id</h4>
+                <p>Seleciona o id de um elemento pelo atributo id="", digite o id após um #, ex:</p>
+                <div class="codigo">
+                    #inicio {font-size: 30px;} <span class="comentario">/*Seleciona o elemento que possui o id inicio e aplica estilo nele*/</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>Combinar seletores</h4>
+                <p>É possivel combinar seletores para reduzir código como:</p>
+                <div class="codigo">
+                    h1, h2, p { <br> &emsp;
+                        text-align: center; <br> &emsp;
+                        color: red; <br>
+                      }
+                </div>
+            </div>
+        </article>
+
+        <article id="coresCss">
+            <h3>Cores</h3>
+            <p>É possivel utilizar cores através dos sistemas de nomes de cores, RGB, HEX, HSL, RGBA e HSLA</p>
+            <p>É possivel alterar cor de fundo, cor de texto e cores de bordas</p>
+            <div class="codigo">
+                h1{ <br> &emsp;
+                    background-color: black; <span class="comentario">/*Muda cor de fundo para preto*/</span> <br> &emsp;
+                    color: rgb(255, 255, 255); <span class="comentario">/*Muda cor do texto para branco*/</span> <br> &emsp;
+                    border:2px solid Violet; <span class="comentario">/*Adiciona uma borda de 2px sólida de cor violeta*/</span> <br>
+                }
+            </div>
+        </article>
+
+        <article>
+
+            <h3>Backgrounds</h3>
+            <p>Propriedade backgrounds são usadas para adicionar efeitos de fundo em elementos</p>
+
+            <h4>background-color</h4>
+            <p>Muda a cor de fundo de um elemento. É possivel mudar a cor de fundo de qualquer elemento HTML</p>
+            <div class="ex" style="
+            background-color: aquamarine;
+            width: 300px;
+            color: black;
+            text-align: center;
+            margin: auto;
+            margin-top: 10px;
+            ">
+                Ex: cor de fundo azul
+            </div>
+
+            <h4>opacity</h4>
+            <p>Define a transparência de um elemento. Para não passar transparência para o texto usa-se rgba</p>
+
+            <h4>background-image</h4>
+            <p>Especifica uma imagem para usar como fundo de algum elemento</p>
+            <div class="ex" style="
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+            width: 300px;
+            height: 30px;
+            color: white;
+            text-align: center;
+            align-content: center;
+            margin: auto;
+            margin-top: 10px;
+            ">
+                Ex: foto de fundo
+            </div>
+
+            <h4>Repetição de imagens no CSS</h4>
+            <p>Por padrão imagens de fundo se repetem tanto horizontalmente como verticalmente. <a href="exemplos/backgroundRepeat.html">Clique para ver exemplo</a></p>
+            <p>Para fazer uma imagem se repetir somente horizontalmente utilizasse o <strong>background-repeat: repeat-x</strong>. <a href="exemplos/backgroundRepeatX.html">Exemplo</a></p>
+            <p>Para fazer a imagem se repetir verticalmente, o processo é parecido: <strong>background-repeat: repeat-y</strong>. <a href="exemplos/backgroundRepeatY.html">Exemplo</a></p>
+            <p>Para a imagem ser mostrada somente uma vez, especifica-se na propriedade <strong>background-repeat: no-repeat</strong>. <a href="exemplos/backgroundRepeatNoRepeat.html">Exemplo</a></p>
+            <p>É possivel determinar a posição da imagem de fundo com <strong>background-position:</strong>. <a href="exemplos/backgroundPosition.html">Exemplo</a></p>
+        </article>
+
+        <article id="boxModelCss">
+            <h3>Box model</h3>
+            <p>É uma caixa que rodeia todo elemento. Essa caixa possui: Content(conteúdo), padding(preenchimento), borders(bordas) e margins(margens).</p>
+            <div class="img">
+                <img src="imgs/boxModel.png" alt="Foto de exemplificação box model" width="80%">
+            </div>
+            <ul>
+                <li>Margin: Uma área transparente para distanciar elementos</li>
+                <li>Border: Uma borda que rodeia o elemento</li>
+                <li>Padding: Uma área transparente para distanciar a borda do conteúdo</li>
+                <li>Content: Conteúdo do elemento, podendo ser uma imagem ou texto</li>
+            </ul>
+            <h4>Cálculos</h4>
+            <div class="codigo">
+                div { <br> &emsp;
+                    width: 320px; <br> &emsp;
+                    height: 50px; <br> &emsp;
+                    padding: 10px; <br> &emsp;
+                    border: 5px solid gray; <br> &emsp;
+                    margin: 0; <br>
+                }
+            </div>
+            <p>Cálculo de altura da div acima:</p>
+            <p>50px - height (altura do conteúdo)</p>
+            <p>20px (10px * 2) - padding (há padding em cima e em baixo)</p>
+            <p>10px - border (bordas em cima e embaixo)</p>
+            <p>50 + 20 + 10 = 80px de altura possui a div</p>
+            
+        </article>
+    </main>
+</body>
+</html>

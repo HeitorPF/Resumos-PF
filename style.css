@@ -68,7 +68,7 @@ iframe {
     border-radius: 15px;
 }
 
-.iframe {
+.diviframe {
     margin-top: 10px;
     text-align: center;
 }
@@ -96,9 +96,8 @@ iframe {
 }
 
 
-.galeria{
 
-}
+/*
 .resumo__capa{
     margin: 30px 100px;
     border-style: solid;
@@ -112,4 +111,26 @@ iframe {
         text-decoration: none;
         color: #FFF;
     }
+}
+    */
+.resumo__capa {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 30px 100px;
+    border: 2px solid #FFF;
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.resumo__capa img {
+    height: 80px;
+}
+
+.resumo__capa h2,
+.resumo__capa p {
+    margin: 10px 0;
 }

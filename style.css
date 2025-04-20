@@ -94,3 +94,22 @@ iframe {
         color: rgb(49, 49, 49);
     }
 }
+
+
+.galeria{
+
+}
+.resumo__capa{
+    margin: 30px 100px;
+    border-style: solid;
+    border-color: #FFF;
+    height: 200px;
+    width: 200px;
+    img{
+        height: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: #FFF;
+    }
+}

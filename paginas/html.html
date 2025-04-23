@@ -33,7 +33,9 @@
                 <a href="#blockInlineHtml">Block e inline</a> |
                 <a href="#classIdHtml">class e id</a> |
                 <a href="#iframeHtml">Iframe</a> |
-                <a href="#semanticaHtml">Semântica</a>
+                <a href="#layoutHtml">Layouts</a> |
+                <a href="#semanticaHtml">Semântica</a> |
+                <a href="#formularioHtml">Formulários</a>
             </nav>
         </div>
 
@@ -50,7 +52,7 @@
             <h3>estrutura do HTML</h3>
             <p>As páginas HTML devem possuir uma estrutura base:</p>
             <div class="img">
-                <img src="../imgs/estruturaHTML.png" alt="estruturabase de um código html">
+                <img src="../imgs/estruturaHTML.png" alt="estruturabase de um código html" width="80%">
             </div>
             <div class="codigo">
                 <span class="comentario"><p>&lt;!-- Comentários no HTML são feitos dessa forma --&gt;</p></span>
@@ -370,7 +372,7 @@
             <p>A initial-scale=1.0 define o level de zoom inicial da página quando a página for carregada</p>
         </article>
 
-        <article>
+        <article id="layoutHtml">
             <h3>Layout</h3>
             <p>Website HTML podem conter contepúdos em varias colunas, como em revistas e jornais</p>
             <p>Técnicas para criar layouts com várias colunas (cada uma possuindo seus prós e contras)</p>
@@ -406,12 +408,51 @@
             </ul>
         </article>
 
-        <article>
+        <article id="formularioHtml">
             <h3>Formulários</h3>
-            <p>Formulários são usados para coletar inputs do usuário</p>
-            <h4>&lt;form&gt;</h4>
-            A tag form é usado para criar um formulário para receber input do usuário. Pode receber vários tipos de elementos input
-            <h5>&lt;input&gt;</h5>
+            <p>Formulários são usados para coletar inputs do usuário e estão entre a tag &lt;form&gt;. pPodendo conter vários tipos de elementos input</p>
+            <h4>&lt;input&gt;</h4>
+            <p>Elemento mais usado em formulários e pode ser mostrado de diversas formas, dependendo do atributo "type"</p>
+            <h4>tipos de input</h4>
+            <ul>
+                <li>text - Uma caixa de texto Simplesmente</li>
+                <li>radio - uma bolinha para poder selecionar uma ou mais opções</li>
+                <li>checkbox - caixa para marcar nenhum ou mais opções</li>
+                <li>submit - botão para fazer envio do formulários</li>
+                <li>button - botão clicável</li>
+            </ul>
+
+            <h4>label</h4>
+            <p>O elemento &lt;label&gt; define um rótulo para muitos elementos do formulário. é util acessibilidade de leitores de telas e ajuda o usuário que possui dificuldade a clicar em regiões pequenas. Para linkar o label com input, basta o id do input no atributo for do label</p>
+
+            <h4>Exemplos</h4>
+            <form action="">
+                <p>input type="text"</p>
+                <label for="nome">Digite seu nome:</label> <br>
+                <input type="text" name="texto" id="nome" placeholder="Nome completo"> <br>
+                <br>
+                <p>input type"radio"</p>
+                <input type="radio" name="linguagens" id="html">
+                <label for="html">HTML</label> <br>
+                <input type="radio" name="linguagens" id="css">
+                <label for="css">CSS</label> <br>
+                <input type="radio" name="linguagens" id="javascript">
+                <label for="javascript">JavaScript</label> <br>
+                <br>
+                <p>input type="checkbox"</p>
+                <input type="checkbox" id="bicicleta" name="vehicle1" value="Bike">
+                <label for="bicicleta">Tenho bicicleta</label><br>
+                <input type="checkbox" id="carro" name="vehicle2" value="Car">
+                <label for="carro">Tenho carro</label><br>
+                <input type="checkbox" id="barco" name="vehicle3" value="Boat">
+                <label for="barco">Tenho barco</label> <br>
+                <br>
+                <p>input type="submit"</p>
+                <input type="submit" value="Submit">
+            </form>
+
+            <h4>atributo name</h4>
+            <p>Se o atributo name for omitido do elemento input, o valor do input não será enviado, por isso é importante sempre colocá-lo</p>
         </article>
     </main>
 </body>

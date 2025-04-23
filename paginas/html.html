@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumo HTML</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../imgs/faviconPF.ico">
 </head>
 <body>
     <header>
-        <a href="../"><h1>Resumos PF</h1></a>
+        <a href="index.html"><h1>Resumos PF</h1></a>
         <nav>
-            <a href="../html/">HTML</a> |
-            <a href="../css/">CSS</a> |
-            <a href="../javascript/">JavaScript</a>
+            <a href="html.html">HTML</a> |
+            <a href="css.html">CSS</a> |
+            <a href="javascript.html">JavaScript</a>
         </nav>
     </header>
     <main>
@@ -50,7 +50,7 @@
             <h3>estrutura do HTML</h3>
             <p>As páginas HTML devem possuir uma estrutura base:</p>
             <div class="img">
-                <img src="imgs/estruturaHTML.png" alt="estruturabase de um código html">
+                <img src="../imgs/estruturaHTML.png" alt="estruturabase de um código html">
             </div>
             <div class="codigo">
                 <span class="comentario"><p>&lt;!-- Comentários no HTML são feitos dessa forma --&gt;</p></span>
@@ -137,7 +137,7 @@
             <h3>Inserção de imagem</h3>
             <p>Para inserir uma imagem em HTML basta abrir a tag &lt;img&gt; e colocar no atributo src="" o diretório onde está localizado a imagem, como feito no print acima.</p>
             <div class="img">
-                <img src="imgs/insercaoImg.png" alt="Exemplo de inserção de página">
+                <img src="../imgs/insercaoImg.png" alt="Exemplo de inserção de página">
             </div>
             <p>O atributo src permite que você coloque imagem na pasta do projeto e em diferentes servidores/sites colocando a url.</p>
             <p>Também é possivel colocar gifs no atributo src.</p>
@@ -162,9 +162,9 @@
             <p>O elemento picture possui um ou mais elementos &lt;source&gt;, cada um direcionando para um imagem através do atributo srcset="". Cada elemento &lt;source&gt; também possui um atributo media que define quando a imagem deve ser inserida.</p>
             <div class="img">
                 <picture>
-                    <source media="(min-width: 1150px)" srcset="imgs/testePictureWide.png">
-                    <source media="(min-width: 700px)" srcset="imgs/testePictureMed.png">
-                    <img src="imgs/testePictureShort.png">
+                    <source media="(min-width: 1150px)" srcset="../imgs/testePictureWide.png">
+                    <source media="(min-width: 700px)" srcset="../imgs/testePictureMed.png">
+                    <img src="../imgs/testePictureShort.png">
                 </picture>
             </div>
             <p>Sempre use uma &lt;img&gt; no fim da &lt;picture&gt;. Ela será usada caso nenhuma imagem do &lt;source&gt; for suportada.</p>
@@ -339,7 +339,7 @@
             <h3>Iframe</h3>
             <p>tag iframe é utilizada para colocar um site dentro de outro site</p>
             <div class="diviframe">
-                <iframe src="../css" height="300px" width="80%" title="Teste iframe"></iframe>
+                <iframe src="css.html" height="300px" width="80%" title="Teste iframe"></iframe>
             </div>
             <div class="codigo">
                 &lt;iframe srv=css.html height="300px" width="1400px"&gt;
@@ -395,7 +395,7 @@
             <h3>Elementos semântivos</h3>
             <p>São elementos que possuem um significado, tanto para o navegador tanto para o desenvolvedor, mas não interferem na estrutura do HTML</p>
             <div class="img">
-                <img src="imgs/semanticaHTML.png" alt="Exemplos de elementos semânticos">
+                <img src="../imgs/semanticaHTML.png" alt="Exemplos de elementos semânticos">
             </div>
             <h4>Alguns exemplos:</h4>
             <ul>

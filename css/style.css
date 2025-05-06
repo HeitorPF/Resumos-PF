@@ -134,3 +134,9 @@ iframe {
 .resumo__capa p {
     margin: 10px 0;
 }
+
+.galeria {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
